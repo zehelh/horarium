@@ -1,14 +1,16 @@
 <template>
-  <div></div>
+  <div class="col-12">
+    <semaine></semaine>
+  </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+import Semaine from './components/Semaine.vue'
 
 export default {
   name: 'App',
   components: {
-    // HelloWorld
+    Semaine
   }
 }
 </script>
