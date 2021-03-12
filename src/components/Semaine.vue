@@ -1,5 +1,6 @@
 <template>
     <div class="card card-body semaine d-flex flex-row justify-content-evenly flex-wrap col-12">
+    <div v-if="list">COUCOU</div>
       <div class="day col-8 col-md-3 d-flex flex-column">
         <p>Lundi</p>
         <div v-if="lundi">
@@ -47,6 +48,7 @@
 
 <script>
 export default {
+  // inject: ['list'],
   props: ['list'],
   name: 'Semaine',
   data(){

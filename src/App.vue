@@ -1,6 +1,6 @@
 <template>
   <div class="col-12">
-    <custom-form @create="addItem" @item="customItem"></custom-form>
+    <custom-form @create="addItem"></custom-form>
     <semaine :list="list"></semaine>
   </div>
 </template>
@@ -22,16 +22,22 @@ export default {
   },
   methods: {
     addItem(item) {
-      this.list.push('ca add');
       this.list.push(item);
+      console.log(this.list);
+      console.log('ca add');
     },
   },
   watch: {
     list() {
-      console.log('tkt');
+      console.log('c\'est full good ta mère');
       console.log(this.list);
     },
   },
+  provide() {
+    return {
+      list: this.list,
+    }
+  }
 }
 </script>
 

@@ -80,9 +80,8 @@ export default {
             dimanche: this.dimanche,
           },
         };
-        this.$emit('create', item);
-        this.$emit('item');
         console.log('Nul');
+        this.$emit('create', item);
       }
     },
   },
