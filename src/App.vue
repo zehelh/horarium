@@ -1,17 +1,37 @@
 <template>
   <div class="col-12">
-    <semaine></semaine>
+    <custom-form @create="addItem" @item="customItem"></custom-form>
+    <semaine :list="list"></semaine>
   </div>
 </template>
 
 <script>
+import CustomForm from './components/CustomForm.vue';
 import Semaine from './components/Semaine.vue'
 
 export default {
   name: 'App',
+  data(){
+    return {
+      list: [],
+    }
+  },
   components: {
-    Semaine
-  }
+    CustomForm,
+    Semaine,
+  },
+  methods: {
+    addItem(item) {
+      this.list.push('ca add');
+      this.list.push(item);
+    },
+  },
+  watch: {
+    list() {
+      console.log('tkt');
+      console.log(this.list);
+    },
+  },
 }
 </script>
 
