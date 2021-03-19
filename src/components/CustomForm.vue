@@ -4,15 +4,15 @@
         Ajouter un évenement
       </button>
       <div class="collapse col-12" id="collapseExample">
-        <div class="input-group mb-3 flex-wrap flex-xl-column">
+        <div class="input-group mb-3 flex-wrap">
           <span class="input-group-text" id="basic-addon1">Nom de l'évenement</span>
           <input type="text" class="form-control" v-model="name">
         </div>
-        <div class="input-group mb-3 flex-wrap flex-sm-column">
+        <div class="input-group mb-3 flex-wrap">
           <span class="input-group-text" id="basic-addon1">Plage hoaire du debut</span>
           <input type="time" class="form-control" v-model="start">
         </div>
-        <div class="input-group mb-3 flex-wrap flex-sm-column">
+        <div class="input-group mb-3 flex-wrap">
           <span class="input-group-text" id="basic-addon1">Plage horaire de fin</span>
           <input type="time" class="form-control" v-model="end">
         </div>
@@ -38,7 +38,9 @@
           <input type="checkbox" class="btn-check" v-model="dimanche" id="dimanche" autocomplete="off">
           <label class="btn btn-outline-primary" for="dimanche">Dimanche</label>
         </div>
-      <button class="btn btn-primary col-6 mt-3 mb-3" @click="addEvent" >Créer</button>
+        <div class="col-12">
+            <button class="btn btn-primary col-6 mt-3 mb-3" @click="addEvent" >Créer</button>
+        </div>
       </div>
     </div>
 </template>
