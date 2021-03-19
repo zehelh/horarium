@@ -4,11 +4,12 @@
     "icons": [
         {
             "src": "/logo.png",
+            "sizes": "144x144",
             "type": "image/png"
         }
     ],
     "start_url": "/",
     "display": "standalone",
     "background_color": "#3E4EB8",
-    "theme_color": "#2F38BA2"
+    "theme_color": "white"
 }
