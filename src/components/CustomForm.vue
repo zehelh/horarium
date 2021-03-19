@@ -1,22 +1,22 @@
 <template>
-      <div class="col-10 d-flex flex-column align-items-center mb-4">
+      <div class="col-12 d-flex flex-column align-items-center mb-4">
       <button class="btn btn-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
         Ajouter un évenement
       </button>
-      <div class="collapse" id="collapseExample">
-        <div class="input-group mb-3">
+      <div class="collapse col-12" id="collapseExample">
+        <div class="input-group mb-3 flex-wrap flex-xl-column">
           <span class="input-group-text" id="basic-addon1">Nom de l'évenement</span>
           <input type="text" class="form-control" v-model="name">
         </div>
-        <div class="input-group mb-3">
+        <div class="input-group mb-3 flex-wrap flex-sm-column">
           <span class="input-group-text" id="basic-addon1">Plage hoaire du debut</span>
           <input type="time" class="form-control" v-model="start">
         </div>
-        <div class="input-group mb-3">
+        <div class="input-group mb-3 flex-wrap flex-sm-column">
           <span class="input-group-text" id="basic-addon1">Plage horaire de fin</span>
           <input type="time" class="form-control" v-model="end">
         </div>
-        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+        <div class="btn-group flex-wrap" role="group" aria-label="Basic checkbox toggle button group">
           <input type="checkbox" class="btn-check" v-model="lundi" id="lundi" autocomplete="off">
           <label class="btn btn-outline-primary" for="lundi">Lundi</label>
 

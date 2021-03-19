@@ -1,5 +1,5 @@
 <template>
-  <div class="col-10">
+  <div class="col-12">
     <custom-form @create="addItem"></custom-form>
     <semaine></semaine>
   </div>
