@@ -64,34 +64,68 @@ export default {
   methods: {
     addEvent() {
       if(this.start != '' && this.end != '' && this.name != '' ){
-        const item = {
-          data: {
-            name: this.name,
-            start: this.start,
-            end: this.end,
-          },
-          days: {
-            lundi: this.lundi,
-            mardi: this.mardi,
-            mercredi: this.mercredi,
-            jeudi: this.jeudi,
-            vendredi: this.vendredi,
-            samedi: this.samedi,
-            dimanche: this.dimanche,
-          },
-        };
-        console.log('Nul');
+        let item = {};
+        if(this.lundi){
+          item.lundi = {
+              name: this.name,
+              start: this.start,
+              end: this.end,
+          };
+        }
+        if(this.mardi){
+          item.mardi = {
+              name: this.name,
+              start: this.start,
+              end: this.end,
+          };
+        }
+        if(this.mercredi){
+          item.mercredi = {
+              name: this.name,
+              start: this.start,
+              end: this.end,
+          };
+        }
+        if(this.jeudi){
+          item.jeudi = {
+              name: this.name,
+              start: this.start,
+              end: this.end,
+          };
+        }
+        if(this.vendredi){
+          item.vendredi = {
+              name: this.name,
+              start: this.start,
+              end: this.end,
+          };
+        }
+        if(this.samedi){
+          item.samedi = {
+              name: this.name,
+              start: this.start,
+              end: this.end,
+          };
+        }
+        if(this.dimanche){
+          item.dimanche = {
+              name: this.name,
+              start: this.start,
+              end: this.end,
+          };
+        }
+        console.log('1/4');
         this.$emit('create', item);
       }
     },
   },
   watch: {
   },
-  provide() {
-    return {
-      addEvent: this.addEvent,
-    }
-  }
+  // provide() {
+  //   return {
+  //     addEvent: this.addEvent,
+  //   }
+  // }
 }
 </script>
 

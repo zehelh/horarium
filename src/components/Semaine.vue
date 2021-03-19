@@ -1,100 +1,101 @@
 <template>
     <div class="card card-body semaine d-flex flex-row justify-content-evenly flex-wrap col-12">
-    <div v-if="list">COUCOU</div>
+      
       <div class="day col-8 col-md-3 d-flex flex-column">
-        <p>Lundi</p>
-        <div v-if="lundi">
-          <div v-for="item in lundi" :key="item"></div>
-        </div>
+        <p class="bg-light">Lundi</p>
+          <div v-for="item in list" :key="item">
+            <div v-if="item.lundi">
+              <div class="card">
+                <div class="card-header bg-primary">{{item.lundi.name}}</div>
+                <div class="card-body">De {{item.lundi.start}} à {{item.lundi.end}}</div>
+              </div>
+            </div>
+          </div>
       </div>
       <div class="day col-8 col-md-3 d-flex flex-column">
-        <p>mardi</p>
-        <div v-if="mardi">
-          <div v-for="item in mardi" :key="item"></div>
-        </div>
+        <p class="bg-light">mardi</p>
+          <div v-for="item in list" :key="item">
+            <div v-if="item.mardi">
+              <div class="card">
+                <div class="card-header bg-primary">{{item.mardi.name}}</div>
+                <div class="card-body">De {{item.mardi.start}} à {{item.mardi.end}}</div>
+              </div>
+            </div>
+          </div>
       </div>
       <div class="day col-8 col-md-3 d-flex flex-column">
-        <p>mercredi</p>
-        <div v-if="mercredi">
-          <div v-for="item in mercredi" :key="item"></div>
-        </div>
+        <p class="bg-light">mercredi</p>
+          <div v-for="item in list" :key="item">
+            <div v-if="item.mercredi">
+              <div class="card">
+                <div class="card-header bg-primary">{{item.mercredi.name}}</div>
+                <div class="card-body">De {{item.mercredi.start}} à {{item.mercredi.end}}</div>
+              </div>
+            </div>
+          </div>
       </div>
       <div class="day col-8 col-md-3 d-flex flex-column">
-        <p>jeudi</p>
-        <div v-if="jeudi">
-          <div v-for="item in jeudi" :key="item"></div>
-        </div>
+        <p class="bg-light">jeudi</p>
+          <div v-for="item in list" :key="item">
+            <div v-if="item.jeudi">
+              <div class="card">
+                <div class="card-header bg-primary">{{item.jeudi.name}}</div>
+                <div class="card-body">De {{item.jeudi.start}} à {{item.jeudi.end}}</div>
+              </div>
+            </div>
+          </div>
       </div>
       <div class="day col-8 col-md-3 d-flex flex-column">
-        <p>vendredi</p>
-        <div v-if="vendredi">
-          <div v-for="item in vendredi" :key="item"></div>
-        </div>
+        <p class="bg-light">vendredi</p>
+          <div v-for="item in list" :key="item">
+            <div v-if="item.vendredi">
+              <div class="card">
+                <div class="card-header bg-primary">{{item.vendredi.name}}</div>
+                <div class="card-body">De {{item.vendredi.start}} à {{item.vendredi.end}}</div>
+              </div>
+            </div>
+          </div>
       </div>
       <div class="day col-8 col-md-3 d-flex flex-column">
-        <p>samedi</p>
-        <div v-if="samedi">
-          <div v-for="item in samedi" :key="item"></div>
-        </div>
+        <p class="bg-light">samedi</p>
+          <div v-for="item in list" :key="item">
+            <div v-if="item.samedi">
+              <div class="card">
+                <div class="card-header bg-primary">{{item.samedi.name}}</div>
+                <div class="card-body">De {{item.samedi.start}} à {{item.samedi.end}}</div>
+              </div>
+            </div>
+          </div>
       </div>
       <div class="day col-8 col-md-3 d-flex flex-column">
-        <p>dimanche</p>
-        <div v-if="dimanche">
-          <div v-for="item in dimanche" :key="item"></div>
-        </div>
+        <p class="bg-light">dimanche</p>
+          <div v-for="item in list" :key="item">
+            <div v-if="item.dimanche">
+              <div class="card">
+                <div class="card-header bg-primary">{{item.dimanche.name}}</div>
+                <div class="card-body">De {{item.dimanche.start}} à {{item.dimanche.end}}</div>
+              </div>
+            </div>
+          </div>
       </div>
+
     </div>
 </template>
 
 <script>
 export default {
-  // inject: ['list'],
-  props: ['list'],
+  inject: ['list'],
   name: 'Semaine',
   data(){
     return {
-      lundi: {},
-      mardi: {},
-      mercredi: {},
-      jeudi: {},
-      vendredi: {},
-      samedi: {},
-      dimanche: {},
     }
   },
   methods: {
 
   },
+  computed: {
+  },
   watch: {
-    list() {
-      console.log('YESSSSSSSSSSSSSSSS');
-      console.log(this.list);
-      for (const item in this.list) {
-        switch (item.days) {
-          case 'lundi':
-            this.lundi.push(item.data);            
-            break;
-          case 'mardi':
-            this.mardi.push(item.data);            
-            break;
-          case 'mercredi':
-            this.mercredi.push(item.data);            
-            break;
-          case 'jeudi':
-            this.jeudi.push(item.data);            
-            break;
-          case 'vendredi':
-            this.vendredi.push(item.data);            
-            break;
-          case 'samedi':
-            this.samedi.push(item.data);            
-            break;
-          case 'dimanche':
-            this.dimanche.push(item.data);            
-            break;        
-        }
-      }
-    }
   }
 }
 </script>

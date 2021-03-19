@@ -1,7 +1,7 @@
 <template>
   <div class="col-12">
     <custom-form @create="addItem"></custom-form>
-    <semaine :list="list"></semaine>
+    <semaine></semaine>
   </div>
 </template>
 
@@ -24,12 +24,12 @@ export default {
     addItem(item) {
       this.list.push(item);
       console.log(this.list);
-      console.log('ca add');
+      console.log('2/4');
     },
   },
   watch: {
     list() {
-      console.log('c\'est full good ta mère');
+      console.log('3/4');
       console.log(this.list);
     },
   },
