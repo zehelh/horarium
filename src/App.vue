@@ -23,14 +23,10 @@ export default {
   methods: {
     addItem(item) {
       this.list.push(item);
-      console.log(this.list);
-      console.log('2/4');
     },
   },
   watch: {
     list() {
-      console.log('3/4');
-      console.log(this.list);
     },
   },
   provide() {

@@ -114,7 +114,6 @@ export default {
               end: this.end,
           };
         }
-        console.log('1/4');
         this.$emit('create', item);
       }
     },
