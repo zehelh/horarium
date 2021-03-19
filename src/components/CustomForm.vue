@@ -1,5 +1,5 @@
 <template>
-      <div class="col-12 d-flex flex-column align-items-center mb-4">
+      <div class="col-10 d-flex flex-column align-items-center mb-4">
       <button class="btn btn-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
         Ajouter un évenement
       </button>
